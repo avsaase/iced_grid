@@ -153,11 +153,7 @@ const HORIZONTAL_ALIGNMENTS: [Horizontal; 3] =
 
 const VERTICAL_ALIGNMENTS: [Vertical; 3] = [Vertical::Top, Vertical::Center, Vertical::Bottom];
 
-const STRATEGIES: [Strategy; 2] = [
-    Strategy::Minimum,
-    Strategy::Equal,
-    // Strategy::Fixed(Pixels(30.0)),
-];
+const STRATEGIES: [Strategy; 2] = [Strategy::Minimum, Strategy::Equal];
 
 fn horizontal_align_to_string(alignment: &Horizontal) -> String {
     match alignment {
@@ -199,7 +195,6 @@ fn strategy_to_string(strategy: &Strategy) -> String {
     match strategy {
         Strategy::Minimum => "Minimum",
         Strategy::Equal => "Equal",
-        // Strategy::Fixed(_) => "Fixed",
     }
     .to_string()
 }
